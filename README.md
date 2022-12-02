@@ -6,3 +6,5 @@ Sur Mogenius,
   - Créer un service à partir de ce repository pour publier l'application.
   - Configurer les variables d'environnement DB_HOST, DB_USER et DB_PWD correspondant aux valeurs précédentes.
   - Ne pas oublier d'y allouer suffisament de RAM, et démarrer le service.
+  
+  ###Lien: https://mep-prod-mepdb-jwly0i.mo6.mogenius.io/
