@@ -15,4 +15,14 @@ class LyricsController {
     String all(@RequestParam(name="id",defaultValue = "0")long id) {
         return String.valueOf(id);
     }
+
+    @GetMapping("/line")
+    String getLine(@RequestParam(name="id",defaultValue = "0")long id) {
+        return String.valueOf(id);
+    }
+
+    @GetMapping("/test")
+    String test() {
+        return "Hello";
+    }
 }
