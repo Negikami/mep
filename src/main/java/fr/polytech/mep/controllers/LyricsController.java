@@ -18,11 +18,11 @@ class LyricsController {
     private LyricsRepository centerRep;
 
     LyricsController() {
-        InitDb();
     }
 
     @GetMapping("/line")
     String getLine(@RequestParam(name="id",defaultValue = "0")long id) {
+        InitDb();
         try{
             Lyrics l = centerRep.findById(id).get();
             return l.getLyric();
