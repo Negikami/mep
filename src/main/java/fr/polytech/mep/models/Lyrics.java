@@ -16,6 +16,14 @@ public class Lyrics {
     private long id;
     private String lyric;
 
+    public Lyrics() {
+    }
+
+    public Lyrics(long id, String lyric) {
+        this.lyric = lyric;
+        this.id = id;
+    }
+
     public Lyrics(String lyric) {
         this.lyric = lyric;
     }
