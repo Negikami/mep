@@ -1,7 +1,7 @@
 FROM gradle:jdk19-alpine AS build
 WORKDIR /home/gradle/project/
 COPY . /home/gradle/project/
-WORKDIR /home/gradle/project/miseEnProd
+WORKDIR /home/gradle/project/mep
 RUN gradle --no-daemon bootJar
 
 FROM openjdk:19
