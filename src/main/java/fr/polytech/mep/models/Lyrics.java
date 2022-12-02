@@ -20,6 +20,14 @@ public class Lyrics {
         this.lyric = lyric;
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public String getLyric() {
         return lyric;
     }
