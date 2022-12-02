@@ -10,5 +10,4 @@ public class MepApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MepApplication.class, args);
 	}
-
 }
