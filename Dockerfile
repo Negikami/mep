@@ -1,9 +1,11 @@
-FROM gradle:jdk19-alpine AS build
-WORKDIR /home/gradle/project/
-COPY . /home/gradle/project/
-WORKDIR /home/gradle/project/mep
+FROM gradle AS build
+COPY --chown=gradle:gradle . /home/gradle/src
+WORKDIR /home/gradle/src
 RUN gradle build
 
-FROM openjdk:19
-COPY --from=build /home/gradle/project/mep/build/libs/*.jar /app.jar
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+FROM openjdk:17-jdk-slim
+EXPOSE 8080
+
+RUN mkdir /app
+COPY --from=build /home/gradle/src/build/libs/*.jar /app/spring-boot-application.jar
+ENTRYPOINT exec java -jar /app/spring-boot-application.jar
